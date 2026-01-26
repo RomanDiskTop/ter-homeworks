@@ -1,0 +1,13 @@
+# Local .terraform directories and files
+**/.terraform/*
+.terraform*
+
+!.terraformrc
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+secrets.tfvars
+authorized_key.json
+# own secret vars store.
+personal.auto.tfvars
