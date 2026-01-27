@@ -7,7 +7,7 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-secrets.tfvars
 authorized_key.json
+terraform.tfvars
 # own secret vars store.
 personal.auto.tfvars
