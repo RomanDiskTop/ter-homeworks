@@ -8,6 +8,6 @@
 *.tfstate
 *.tfstate.*
 authorized_key.json
-terraform.tfvars
+*.tfvars
 # own secret vars store.
 personal.auto.tfvars
