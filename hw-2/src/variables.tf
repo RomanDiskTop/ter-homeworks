@@ -26,13 +26,47 @@ variable "vpc_name" {
   description = "VPC network & subnet name"
 }
 
-### ssh vars
-
-variable "vms_ssh_root_key" {
-  type        = string
-  default     = "<your_ssh_ed25519_key>"
-  description = "ssh-keygen -t ed25519"
+# Для задания 6
+variable "vms_resources" {
+  type = map(object({
+    cores         = number
+    memory        = number
+    core_fraction = number
+  }))
+  default = {
+    web = {
+      cores         = 2
+      memory        = 1
+      core_fraction = 20
+    }
+    db = {
+      cores         = 2
+      memory        = 2
+      core_fraction = 20
+    }
+  }
+  description = "Ресурсы для виртуальных машин (CPU, RAM, core fraction)"
 }
+
+variable "metadata" {
+  type = object({
+    serial-port-enable = number
+    ssh-keys           = string
+  })
+  default = {
+    serial-port-enable = 1
+    ssh-keys           = "<your_ssh_ed25519_key>"
+  }
+  description = "Метаданные для всех виртуальных машин"
+}
+
+### service account vars
+
+# variable "vms_ssh_root_key" {  # - теперь в metadata
+#   type        = string
+#   default     = "<your_ssh_ed25519_key>"
+#   description = "ssh-keygen -t ed25519"
+# }
 
 variable "service_account_key_file" {
   type        = string

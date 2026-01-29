@@ -10,23 +10,23 @@ variable "vm_web_platform_id" {
   description = "Platform ID for the web VM"
 }
 
-variable "vm_web_cores" {
-  type        = number
-  default     = 2
-  description = "Number of CPU cores for web VM"
-}
+# variable "vm_web_cores" {
+#   type        = number
+#   default     = 2
+#   description = "Number of CPU cores for web VM"
+# }
 
-variable "vm_web_memory" {
-  type        = number
-  default     = 1
-  description = "Amount of memory in GB for web VM"
-}
+# variable "vm_web_memory" {
+#   type        = number
+#   default     = 1
+#   description = "Amount of memory in GB for web VM"
+# }
 
-variable "vm_web_core_fraction" {
-  type        = number
-  default     = 20
-  description = "CPU core fraction for web VM"
-}
+# variable "vm_web_core_fraction" {
+#   type        = number
+#   default     = 20
+#   description = "CPU core fraction for web VM"
+# }
 
 variable "vm_web_preemptible" {
   type        = bool
@@ -40,11 +40,11 @@ variable "vm_web_nat" {
   description = "Enable NAT for the web VM"
 }
 
-variable "vm_web_serial_port_enable" {
-  type        = number
-  default     = 1
-  description = "Enable serial port access for web VM"
-}
+# variable "vm_web_serial_port_enable" {
+#   type        = number
+#   default     = 1
+#   description = "Enable serial port access for web VM"
+# }
 
 variable "vm_web_image_family" {
   type        = string
@@ -66,23 +66,23 @@ variable "vm_db_platform_id" {
   description = "Platform ID for the database VM"
 }
 
-variable "vm_db_cores" {
-  type        = number
-  default     = 2
-  description = "Number of CPU cores for database VM"
-}
+# variable "vm_db_cores" {
+#   type        = number
+#   default     = 2
+#   description = "Number of CPU cores for database VM"
+# }
 
-variable "vm_db_memory" {
-  type        = number
-  default     = 2
-  description = "Amount of memory in GB for database VM"
-}
+# variable "vm_db_memory" {
+#   type        = number
+#   default     = 2
+#   description = "Amount of memory in GB for database VM"
+# }
 
-variable "vm_db_core_fraction" {
-  type        = number
-  default     = 20
-  description = "CPU core fraction for database VM"
-}
+# variable "vm_db_core_fraction" {
+#   type        = number
+#   default     = 20
+#   description = "CPU core fraction for database VM"
+# }
 
 variable "vm_db_preemptible" {
   type        = bool
@@ -96,11 +96,11 @@ variable "vm_db_nat" {
   description = "Enable NAT for the database VM"
 }
 
-variable "vm_db_serial_port_enable" {
-  type        = number
-  default     = 1
-  description = "Enable serial port access for database VM"
-}
+# variable "vm_db_serial_port_enable" {
+#   type        = number
+#   default     = 1
+#   description = "Enable serial port access for database VM"
+# }
 
 variable "vm_db_image_family" {
   type        = string
